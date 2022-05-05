@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- ICS2O-Unit4-03-HTML-Movie -->
+<html lang="en-ca">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="This program will tell the user if they are old enough to go to a movie alone, and which ones they are eligible to see.">
+    <meta name="keywords" content="immaculata, ics2o">
+    <meta name="author" content="Katie G">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css"> 
+    
+    <!-- For the Favicon on this page -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./fav/favicon-16x16.png">
+    <link rel="manifest" href="./fav/site.webmanifest">
+    
+    <!-- Google's MDL -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet"href="https://code.getmdl.io/1.3.0/material.light_green-pink.min.css"/> 
+    <title>My bestie had a website about movies and this is kind of similar so we shall name this website in the honour and memory of my bestie. Nothing happened I just like remembering them.</title>
+
+    <!-- Javascript script file search lookup command that will enable my beloved computer program to do the thing :D -->
+    <script src="./js/script.js"></script>
+  </head>
+  <body>
+    <!-- Google's MDL -->
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <div class = "mdl-layout mdl-js-layout--fixed-header">
+    
+    <!-- Container for web page content -->
+    <main class = "mdl-layout__content" style = "padding-left:10px">
+      
+      <!-- Header, more specifically the largest header possible, primarily for visual structural aesthetic. -->
+      <h1>A website that will judge whether or not you are capable of going to see certain movies based on your age and the age restrictions of the genre.</h1>
+
+      <!-- casual text explaining the function of the website because this is how i like to do some websites -->
+      <p>This website will judge you. Don't enter if you don't want to be judged because I am feeling like judging and I would not want to make you upset.</p>
+
+      <!-- form to collect the age of the user in the MDL style -->
+      <form action="javascript:movieAgeClicked()">
+        <div class="mdl-textfield mdl-js-textfield">
+          <input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="user-age" min="0" step="1">
+          <label class="user-age" for="user-age">Please input your age.</label>
+          <span class="mdl-textfield__error">Please input a valid age (no decimals or negative numbers).</span>
+        </div>
+        <br>
+        <br>
+
+        <!-- the button that will initiate the temperature judgement process, mdl style -->
+        <button onclick="movieAgeClicked()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+          Available Movies:
+        </button>
+      </form>
+      <br>
+
+      <!-- the div element that will display the information back to the user -->
+      <div id="available-movies"></div>
+    </main>
+    </div>
+  </body>
+</html>
